@@ -6,19 +6,67 @@
     &__list {
         display: flex;
         flex-direction: column;
-        margin: 10px 0;
-    }
-    .btn {
-        margin: 6% 10% 10% 10%;
-        text-align: center;
-        transition: 0.5s;
-        border-radius: 50px;
-        box-shadow: 4px 6px 20px -6px $colour-grey;
-        @include btn
+        &__card {
+            padding: 0 40px 30px 30px;
+            transition: 0.5s;
+            a {
+                max-width: 400px;
+                position: relative;
+                display: flex;
+                padding: 15px 20px 15px 20px;
+                margin: .5em 0;
+                background: #F2F2F2;
+                text-decoration: none;
+                border-radius: 25px;
+                transition: all .3s ease-out;
+                box-shadow: 4px 6px 20px -6px $colour-grey;
+                color: $colour-grey;
+            }
+            i:hover {
+                color: $colour-violet;
+            }
+            h4 {
+                padding-left: 10px;
+                color: black;
+            }
+        }
     }
 }
 
 
-/*& a:link {
-        text-decoration: dashed;
-    }*/
+/*.fonctionnement__list a {
+    position: relative;
+    display: block;
+    padding: 15px 20px 15px 20px;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #F2F2F2;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .3s ease-out;
+    box-shadow: 4px 6px 20px -6px $colour-grey;
+}
+*/
+
+.fonctionnement__list a:hover {
+    background: #eee;
+}
+
+.fonctionnement__list a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: $colour-violet;
+    color: #fff;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: 1px solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}

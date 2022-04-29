@@ -15,7 +15,13 @@
 </head>
 
 <body>
-    <div class="loader"></div>
+    <div class="loader">
+        <button class="button__loader">
+            <span class="button__text logo">
+              ohmyfood
+            </span>
+          </button>
+    </div>
     <header>
         <a href="Projet3ygk/index.html">
             <h1 class="logo">ohmyfood </h1>
@@ -36,12 +42,24 @@
         <section class="fonctionnement">
             <h2 class="fonctionnement__heading">Fonctionnement</h2>
             <ol class="fonctionnement__list">
-                <li class="fonctionnement__card">
+                <li class="fonctionnement__list__card">
                     <a href="#">
-                        <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</a>
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Choisissez un restaurant</h4>
+                    </a>
                 </li>
-                <li class="fonctionnement__card"><a href="#"><i class="fas fa-list-ul"></i>Composez votre menu</a></li>
-                <li class="fonctionnement__card"><a href="#"><i class="fas fa-store"></i>Dégustez au restaurant</a></li>
+                <li class="fonctionnement__list__card">
+                    <a href="#">
+                        <i class="fas fa-list-ul"></i>
+                        <h4>Composez votre menu</h4>
+                    </a>
+                </li>
+                <li class="fonctionnement__list__card">
+                    <a href="#">
+                        <i class="fas fa-store"></i>
+                        <h4>Dégustez au restaurant</h4>
+                    </a>
+                </li>
             </ol>
         </section>
 
@@ -55,8 +73,10 @@
                     <p>Nouveau</p>
                 </div>
                 <div class="card__text">
-                    <h4 class="card__text__heading"> La palette du goût</h4>
-                    <p class="card__text__byline">Ménilmontant</p>
+                    <div class="card__text__description">
+                        <h4 class="card__text__heading"> La palette du goût</h4>
+                        <p class="card__text__byline">Ménilmontant</p>
+                    </div>
                     <div class="card__text__heart"><i class="fas fa-heart "></i><i class="fas fa-heart "></i></div>
                 </div>
 
@@ -68,8 +88,10 @@
                     <p>Nouveau</p>
                 </div>
                 <div class="card__text">
-                    <h4 class="card__text__heading">La note enchantée</h4>
-                    <p class="card__text__byline">Charonne</p>
+                    <div class="card__text__description">
+                        <h4 class="card__text__heading">La note enchantée</h4>
+                        <p class="card__text__byline">Charonne</p>
+                    </div>
                     <div class="card__text__heart"><i class="fas fa-heart "></i><i class="fas fa-heart "></i></div>
                 </div>
 
@@ -78,16 +100,21 @@
 
                 <div class="card__image"><img src="images/francaise.jpg" alt="CitéRouge"></div>
                 <div class="card__text">
-                    <h4 class="card__text__heading">A la française</h4>
-                    <p class="card__text__byline">La Cité rouge</p>
+                    <div class="card__text__description">
+                        <h4 class="card__text__heading">A la française</h4>
+                        <p class="card__text__byline">La Cité rouge</p>
+                    </div>
                     <div class="card__text__heart"><i class="fas fa-heart "></i><i class="fas fa-heart "></i></div>
                 </div>
             </a>
             <a href="menu/delice.html" class="card">
                 <div class="card__image"><img src="images/delice.jpg" alt="Folie-Méricourt"></div>
                 <div class="card__text">
-                    <h4>Le délice des sens</h4>
-                    <p class="card__text__byline">Folie-Méricourt</p>
+                    <div class="card__text__description">
+                        <h4 class="card__text__heading">Le délice des sens</h4>
+
+                        <p class="card__text__byline">Folie-Méricourt</p>
+                    </div>
                     <div class="card__text__heart"><i class="fas fa-heart "></i><i class="fas fa-heart "></i></div>
                 </div>
             </a>

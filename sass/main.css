@@ -165,7 +165,7 @@ header h1 {
 
 .search__location {
   background-color: #e4e4e4c5;
-  padding: 15px 50%;
+  padding: 20px 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,8 +174,8 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-shadow: inset 0px 4px 8px #a19494;
-          box-shadow: inset 0px 4px 8px #a19494;
+  -webkit-box-shadow: inset 0px 4px 8px #b4afaf;
+          box-shadow: inset 0px 4px 8px #b4afaf;
 }
 
 .search__location__input {
@@ -187,7 +187,7 @@ header h1 {
 }
 
 .search h2 {
-  margin: 10px 0;
+  margin: 30px 0 10px 0;
   text-align: center;
 }
 
@@ -211,37 +211,160 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0;
 }
 
-.fonctionnement .btn {
-  margin: 6% 10% 10% 10%;
-  text-align: center;
+.fonctionnement__list__card {
+  padding: 0 40px 30px 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-radius: 50px;
+}
+
+.fonctionnement__list__card a {
+  max-width: 400px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 20px 15px 20px;
+  margin: .5em 0;
+  background: #F2F2F2;
+  text-decoration: none;
+  border-radius: 25px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   -webkit-box-shadow: 4px 6px 20px -6px grey;
           box-shadow: 4px 6px 20px -6px grey;
-  padding: 1.5rem;
-  border: 0.1rem solid black;
+  color: grey;
+}
+
+.fonctionnement__list__card i:hover {
+  color: #9356DC;
+}
+
+.fonctionnement__list__card h4 {
+  padding-left: 10px;
   color: black;
-  background: #F2F2F2;
-  cursor: pointer;
 }
 
-.fonctionnement .btn:hover {
-  background: black;
-  color: #D6FFF5;
+/*.fonctionnement__list a {
+    position: relative;
+    display: block;
+    padding: 15px 20px 15px 20px;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #F2F2F2;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .3s ease-out;
+    box-shadow: 4px 6px 20px -6px $colour-grey;
+}
+*/
+.fonctionnement__list a:hover {
+  background: #eee;
 }
 
-.fonctionnement .btn--full-width {
+.fonctionnement__list a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #9356DC;
+  color: #fff;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 1px solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+#restaurant {
+  background-color: #f2f2f2;
   width: 100%;
-  margin: 0 auto;
 }
 
-/*& a:link {
-        text-decoration: dashed;
-    }*/
+#restaurant h3 {
+  padding: 20px 0 10px 5px;
+}
+
+.card {
+  margin: 20px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  max-width: 400px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 5px 5px 5px 1px grey;
+          box-shadow: 5px 5px 5px 1px grey;
+}
+
+.card:hover {
+  -webkit-transform: translate(5px, 5px) scale(0.98);
+          transform: translate(5px, 5px) scale(0.98);
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.card__image--new {
+  height: 133px;
+}
+
+.card__image--new p {
+  position: relative;
+  left: 250px;
+  top: -120px;
+  right: 0;
+  background-color: #81dab8;
+  color: #16886c;
+  font-size: large;
+  font-weight: bold;
+  padding: 10px 25px;
+  width: 130px;
+}
+
+.card__text {
+  margin: 0 5px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__text__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .search {
   background-color: #F2F2F2;
   display: -webkit-box;
@@ -264,7 +387,7 @@ header h1 {
 
 .search__location {
   background-color: #e4e4e4c5;
-  padding: 15px 50%;
+  padding: 20px 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,8 +396,8 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-shadow: inset 0px 4px 8px #a19494;
-          box-shadow: inset 0px 4px 8px #a19494;
+  -webkit-box-shadow: inset 0px 4px 8px #b4afaf;
+          box-shadow: inset 0px 4px 8px #b4afaf;
 }
 
 .search__location__input {
@@ -286,7 +409,7 @@ header h1 {
 }
 
 .search h2 {
-  margin: 10px 0;
+  margin: 30px 0 10px 0;
   text-align: center;
 }
 
