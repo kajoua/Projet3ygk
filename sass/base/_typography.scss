@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    & a {
+        color: $colour-primary;
+    }
+    & a:link {
+        text-decoration: none;
+    }
+}
+
+.logo {
+    font-family: 'Shrikhand', sans-serif;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h2 {}

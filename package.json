@@ -1,0 +1,19 @@
+{
+    "name": "projet3ygk",
+    "version": "1.0.0",
+    "description": "OH MY FOOD",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kajoua/Projet3ygk.git"
+    },
+    "author": "Yang Kajoua",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kajoua/Projet3ygk/issues"
+    },
+    "homepage": "https://github.com/kajoua/Projet3ygk#readme"
+}

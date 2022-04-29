@@ -1,0 +1,10 @@
+header {
+    color: $colour-primary;
+    width: 100%;
+    & h1 {
+        display: flex;
+        font-size: 3rem;
+        align-content: center;
+        justify-content: center;
+    }
+}
