@@ -41,9 +41,11 @@
             justify-content: space-between;
             align-items: center;
             h1 {
-                text-transform: capitalize;
                 font-weight: 100;
                 font-size: 35px;
+                &:first-letter {
+                    text-transform: capitalize;
+                }
             }
             i {
                 font-size: 30px;

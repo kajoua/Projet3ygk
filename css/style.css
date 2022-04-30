@@ -352,6 +352,9 @@ header h1 {
   display: flex;
   flex-direction: column;
 }
+.card__text__heading:first-letter {
+  text-transform: capitalize;
+}
 footer {
   z-index: 2;
   width: 100%;
@@ -421,9 +424,11 @@ footer .footer a h4 {
   align-items: center;
 }
 .listemenus__title h1 {
-  text-transform: capitalize;
   font-weight: 100;
   font-size: 35px;
+}
+.listemenus__title h1:first-letter {
+  text-transform: capitalize;
 }
 .listemenus__title i {
   font-size: 30px;
