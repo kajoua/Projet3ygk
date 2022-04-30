@@ -78,6 +78,99 @@ button {
   text-decoration: none;
 }
 
+.loader {
+  display: grid;
+  place-items: center;
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  /* animation: disappear 3s forwards;*/
+}
+.loader h1 {
+  font-size: 80px;
+  color: grey;
+  opacity: 0.2;
+  padding: 20px;
+  animation: loading 6s 1s forwards;
+  /*background: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: auto 75%;*/
+}
+.loader h1 :before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  background: rebeccapurple;
+  /*-webkit-animation: loading 10s linear;*/
+  animation: loading 10s linear;
+}
+
+@keyframes disappear {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes loading {
+  0% {
+    max-width: 0%;
+  }
+  10% {
+    max-width: 10%;
+  }
+  20% {
+    max-width: 20%;
+  }
+  30% {
+    max-width: 30%;
+  }
+  40% {
+    max-width: 40%;
+  }
+  50% {
+    max-width: 50%;
+  }
+  60% {
+    max-width: 60%;
+  }
+  70% {
+    max-width: 70%;
+  }
+  80% {
+    max-width: 80%;
+  }
+  90% {
+    max-width: 90%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+/*
+.button__loader {
+    position: absolute;
+    left: 50%;
+    margin-left: -1.9em;
+    color: hsla(0, 0%, 100%, .3);
+    font: 900 800%;
+}
+
+@keyframes loading {
+    from {
+        max-width: 0;
+    }
+}
+
+h1:before {
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 4em;
+    color: rebeccapurple;
+
+}*/
 header {
   color: black;
   width: 100%;
