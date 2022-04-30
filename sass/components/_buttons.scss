@@ -1,5 +1,5 @@
     .btn {
-        margin: 6% 10% 10% 10%;
+        margin: 6% 10% 0 10%;
         text-align: center;
         transition: 0.5s;
         border-radius: 50px;
@@ -10,7 +10,7 @@
     .btn__font {
         border: transparent;
         cursor: pointer;
-        padding: 20px 35px;
+        padding: 25px 35px;
         background-size: 200% auto;
         color: $colour-white;
         background-image: linear-gradient( to bottom, $colour-pink, $colour-violet 100%);
