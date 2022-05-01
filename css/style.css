@@ -78,7 +78,7 @@ button {
   text-decoration: none;
 }
 
-.loader {
+.center_div {
   animation: disappear 3s forwards;
   display: grid;
   place-items: center;
@@ -88,32 +88,33 @@ button {
   inset: 0;
   z-index: 1;
 }
+.center_div h1 {
+  font-size: 80px;
+  padding: 20px;
+  color: #F2F2F2;
+  position: relative;
+}
+.center_div h1::before {
+  content: "ohmyfood";
+  width: 100%;
+  background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: auto 75%;
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  top: 0;
+  -webkit-animation: slide 3s linear forwards;
+  animation: slide 3s linear forwards;
+}
 
 @keyframes disappear {
   to {
     visibility: hidden;
   }
 }
-.loader h1 {
-  font-size: 80px;
-  color: grey;
-  opacity: 0.2;
-  padding: 20px;
-  /*animation: loading 6s 1s forwards;*/
-  /*background: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: auto 75%;*/
-  /*:before {
-  content: attr(data-content);
-  position: absolute;
-  overflow: hidden;
-  background: rebeccapurple;
-  /*-webkit-animation: loading 10s linear;
-  animation: loading 10s linear;*/
-}
-
-@keyframes loading {
+@keyframes slide {
   0% {
     max-width: 0%;
   }
@@ -146,6 +147,7 @@ button {
   }
   100% {
     max-width: 100%;
+    visibility: hidden;
   }
 }
 header {
