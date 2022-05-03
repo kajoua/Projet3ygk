@@ -1,12 +1,12 @@
 .center_div {
-    animation: disappear 3s forwards;
+    animation: disappear 2s forwards;
     display: grid;
     place-items: center;
     background: $colour-white;
     position: fixed;
     height: 100vh;
     inset: 0;
-    z-index: 1;
+    z-index: 3;
     h1 {
         font-size: 80px;
         padding: 20px;
@@ -23,8 +23,8 @@
             padding: 20px;
             left: 0;
             top: 0;
-            -webkit-animation: slide 3s linear forwards;
-            animation: slide 3s linear forwards;
+            -webkit-animation: slide 2s linear forwards;
+            animation: slide 2s linear forwards;
         }
     }
 }

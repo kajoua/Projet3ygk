@@ -30,7 +30,7 @@
                     counter-increment: Liste 1;
                     position: absolute;
                     left: -1.3em;
-                    top: 57%;
+                    top: 50%;
                     margin-top: -1.3em;
                     background: $colour-violet;
                     color: #fff;
@@ -60,6 +60,8 @@
             }
             i {
                 font-size: 25px;
+                color: $colour-grey;
+                transition: color .3s;
                 &:hover {
                     color: $colour-violet;
                 }

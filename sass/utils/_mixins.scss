@@ -1,4 +1,4 @@
-@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size) {
     text-shadow: $offset $offset $colour;
 }
 
@@ -8,29 +8,32 @@
 
 @mixin img-ratio {
     width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
+    display: block;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 @mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
+    margin: 6% 10% 0 10%;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 50px;
+    box-shadow: 4px 6px 20px -6px $colour-grey;
+    border: transparent;
     cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
-    }
+    padding: 25px 35px;
+    background-size: 200% auto;
+    color: $colour-white;
+    background-image: linear-gradient( to bottom, $colour-pink, $colour-violet 100%);
+    transition: opacity .3s;
     &--full-width {
         width: 100%;
         margin: 0 auto;

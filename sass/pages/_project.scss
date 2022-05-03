@@ -5,10 +5,7 @@
     grid-template-columns: 5fr 3fr;
     grid-template-rows: repeat(3, auto);
     grid-gap: $grid-gutter;
-    grid-template-areas: 
-        "image synopsis"
-        "tags synopsis"
-        "btn btn";
+    grid-template-areas: "image synopsis" "tags synopsis" "btn btn";
     &__image {
         grid-area: image;
         @include img-ratio;

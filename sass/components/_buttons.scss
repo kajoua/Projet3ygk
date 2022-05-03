@@ -1,22 +1,11 @@
-    .btn {
-        margin: 6% 10% 0 10%;
-        text-align: center;
-        transition: 0.5s;
-        border-radius: 50px;
-        box-shadow: 4px 6px 20px -6px $colour-grey;
-        @include btn
+.btn {
+    &__choice {
+        padding: 17px 25px;
+        margin-top: 50px;
+        width: 50%;
+        align-items: center;
+        margin: 10% 25% 0% 25%;
+        &:hover {}
     }
-    
-    .btn__font {
-        border: transparent;
-        cursor: pointer;
-        padding: 25px 35px;
-        background-size: 200% auto;
-        color: $colour-white;
-        background-image: linear-gradient( to bottom, $colour-pink, $colour-violet 100%);
-        &:hover {
-            background-position: right center;
-            color: #fff;
-            text-decoration: none;
-        }
-    }
+    @include btn
+}

@@ -16,7 +16,7 @@
     grid-column-gap: $grid-gutter;
 }
 
-.proj-prev{
+.proj-prev {
     $self: &;
     color: $colour-white;
     margin-bottom: $grid-gutter;
@@ -37,10 +37,10 @@
     }
     &:hover {
         cursor: pointer;
-        & > #{$self}__heading {
+        &>#{$self}__heading {
             background: $colour-primary;
         }
-        & > #{$self}__image {
+        &>#{$self}__image {
             opacity: 1;
         }
     }
