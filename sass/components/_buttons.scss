@@ -1,11 +1,29 @@
 .btn {
-    &__choice {
-        padding: 17px 25px;
-        margin-top: 50px;
-        width: 50%;
-        align-items: center;
-        margin: 10% 25% 0% 25%;
-        &:hover {}
+    margin: 10px;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 50px;
+    box-shadow: 4px 6px 20px -6px $colour-grey;
+    border: transparent;
+    cursor: pointer;
+    padding: 25px 35px;
+    background-size: 200% auto;
+    color: $colour-white;
+    background-image: linear-gradient( to bottom, $colour-pink, $colour-violet 100%);
+    position: relative;
+    padding: 17px 25px;
+    width: 50%;
+    align-items: center;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
     }
-    @include btn
+    &:hover {
+        opacity: 0.8;
+    }
+    &__choice {
+        margin: 50px 0 70px 90px;
+    }
 }

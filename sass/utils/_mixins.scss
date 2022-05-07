@@ -20,22 +20,3 @@
         transform: translate(-50%, -50%);
     }
 }
-
-@mixin btn {
-    margin: 6% 10% 0 10%;
-    text-align: center;
-    transition: 0.5s;
-    border-radius: 50px;
-    box-shadow: 4px 6px 20px -6px $colour-grey;
-    border: transparent;
-    cursor: pointer;
-    padding: 25px 35px;
-    background-size: 200% auto;
-    color: $colour-white;
-    background-image: linear-gradient( to bottom, $colour-pink, $colour-violet 100%);
-    transition: opacity .3s;
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
-    }
-}

@@ -44,7 +44,7 @@ button {
 }
 
 .btn {
-  margin: 6% 10% 0 10%;
+  margin: 10px;
   text-align: center;
   transition: 0.5s;
   border-radius: 50px;
@@ -55,18 +55,22 @@ button {
   background-size: 200% auto;
   color: #fff;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC 100%);
-  transition: opacity 0.3s;
-}
-.btn__choice {
+  position: relative;
   padding: 17px 25px;
-  margin-top: 50px;
   width: 50%;
   align-items: center;
-  margin: 10% 25% 0% 25%;
 }
-.btn--full-width {
-  width: 100%;
-  margin: 0 auto;
+.btn:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn__choice {
+  margin: 50px 0 70px 90px;
 }
 
 .center_div {
@@ -270,20 +274,6 @@ header h1 {
   font-weight: bold;
   border-radius: 2em;
   transition: all 0.3s ease-out;
-  position: absolute;
-  left: -1.3em;
-  top: 50%;
-  margin-top: -1.3em;
-  background: #9356DC;
-  color: #fff;
-  height: 2em;
-  width: 2em;
-  line-height: 2em;
-  border: 1px solid #fff;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 2em;
-  transition: all 0.3s ease-out;
 }
 .fonctionnement__list__card i {
   font-size: 25px;
@@ -365,8 +355,10 @@ header h1 {
   position: absolute;
   font-size: 30px;
 }
+.card__text__heart .far:hover {
+  display: none;
+}
 .card__text__heart .fas {
-  color: transparent;
   position: relative;
   width: 100%;
   top: 4px;
@@ -379,8 +371,8 @@ header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% auto;
-  -webkit-animation: heart 2s linear infinite;
-  animation: heart 2s linear inifinite;
+  -webkit-animation: heart 2s forwards;
+  animation: heart 2s forwards;
 }
 .card__text__heart .fas:active {
   position: absolute;
@@ -415,38 +407,37 @@ header h1 {
 
 @keyframes heart {
   0% {
-    max-height: 100%;
+    max-height: 0;
   }
   10% {
-    max-height: 90%;
+    max-height: 10%;
   }
   20% {
-    max-height: 80%;
+    max-height: 20%;
   }
   30% {
-    max-height: 70%;
+    max-height: 30%;
   }
   40% {
-    max-height: 60%;
+    max-height: 40%;
   }
   50% {
     max-height: 50%;
   }
   60% {
-    max-height: 40%;
+    max-height: 60%;
   }
   70% {
-    max-height: 30%;
+    max-height: 70%;
   }
   80% {
-    max-height: 20%;
+    max-height: 80%;
   }
   90% {
-    max-height: 10%;
+    max-height: 90%;
   }
   100% {
-    max-height: 0%;
-    visibility: hidden;
+    max-height: 100%;
   }
 }
 footer {
@@ -797,23 +788,7 @@ footer .footer a h4 {
   font-style: italic;
 }
 .project__btn {
-  margin: 6% 10% 0 10%;
-  text-align: center;
-  transition: 0.5s;
-  border-radius: 50px;
-  box-shadow: 4px 6px 20px -6px grey;
-  border: transparent;
-  cursor: pointer;
-  padding: 25px 35px;
-  background-size: 200% auto;
-  color: #fff;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC 100%);
-  transition: opacity 0.3s;
   grid-area: btn;
-}
-.project__btn--full-width {
-  width: 100%;
-  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
