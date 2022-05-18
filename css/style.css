@@ -81,7 +81,7 @@ button {
   position: fixed;
   height: 100vh;
   inset: 0;
-  z-index: 3;
+  z-index: 5;
 }
 .center_div h1 {
   font-size: 80px;
@@ -303,7 +303,6 @@ header h1 {
 }
 
 .card {
-  z-index: 0;
   margin: 20px 5px;
   box-sizing: border-box;
   background: #fff;
@@ -339,6 +338,7 @@ header h1 {
   width: 130px;
 }
 .card__text {
+  position: relative;
   margin: 0 5px;
   padding: 10px;
   display: flex;
@@ -352,39 +352,29 @@ header h1 {
 .card__text__heading:first-letter {
   text-transform: capitalize;
 }
-.card__text__heart {
+.card__text__heart i {
+  right: 20px;
+  top: 15px;
   font-size: 30px;
+  position: absolute;
 }
-.card__text__heart .far {
-  position: relative;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  color: black;
-  z-index: 1;
-}
-.card__text__heart .far:hover {
+
+.far:hover {
   display: none;
   color: transparent;
   z-index: 0;
 }
-.card__text__heart .fas {
-  position: absolute;
-  z-index: 1;
+
+.fas {
   color: transparent;
-  background-color: transparent;
 }
-.card__text__heart .fas:hover {
-  width: 100%;
-  top: 4px;
-  left: 350px;
-  z-index: 1;
+.fas:hover {
   background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% auto;
-  -webkit-animation: heart 3s forwards;
-  animation: heart 3s forwards;
+  -webkit-animation: heart 4s forwards;
+  animation: heart 4s forwards;
 }
 
 @keyframes heart {
@@ -455,6 +445,7 @@ footer .footer a h4 {
   }
 }
 .listemenus {
+  position: relative;
   max-width: 500px;
   width: 100%;
   z-index: 1;
@@ -477,9 +468,11 @@ footer .footer a h4 {
 .listemenus h1:first-letter {
   text-transform: capitalize;
 }
-.listemenus i {
-  font-size: 30px;
-  font-weight: 100;
+.listemenus__heart i {
+  right: 30px;
+  top: 26px;
+  font-size: 35px;
+  position: absolute;
 }
 
 .apparition {

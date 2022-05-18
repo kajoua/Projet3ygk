@@ -35,6 +35,7 @@
     }
     
     .listemenus {
+        position: relative;
         max-width: 500px;
         width: 100%;
         z-index: 1;
@@ -56,9 +57,11 @@
                 text-transform: capitalize;
             }
         }
-        i {
-            font-size: 30px;
-            font-weight: 100;
+        &__heart i {
+            right: 30px;
+            top: 26px;
+            font-size: 35px;
+            position: absolute;
         }
     }
     
