@@ -13,6 +13,7 @@
  }
  
  .card {
+     z-index: 0;
      margin: 20px 5px;
      box-sizing: border-box;
      background: $colour-white;
@@ -63,57 +64,36 @@
          }
          &__byline {}
          &__heart {
-             position: absolute;
              font-size: 30px;
              .far {
+                 position: relative;
+                 width: 100%;
+                 left: 0px;
+                 top: 0px;
+                 color: black;
+                 z-index: 1;
                  &:hover {
                      display: none;
+                     color: transparent;
+                     z-index: 0;
                  }
              }
              .fas {
-                 position: relative;
-                 width: 100%;
-                 top: 4px;
-                 left: 350px;
+                 position: absolute;
                  z-index: 1;
+                 color: transparent;
+                 background-color: transparent;
                  &:hover {
-                     position: absolute;
-                     background-image: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
-                     -webkit-background-clip: text;
-                     -webkit-text-fill-color: transparent;
-                     background-size: 300% auto;
-                     -webkit-animation: heart 2s forwards;
-                     animation: heart 2s forwards;
-                 }
-                 &:active {
-                     position: absolute;
                      width: 100%;
-                     top: -10px;
-                     left: 340px;
-                     font-size: 35px;
+                     top: 4px;
+                     left: 350px;
+                     z-index: 1;
                      background-image: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
                      -webkit-background-clip: text;
                      -webkit-text-fill-color: transparent;
                      background-size: 300% auto;
-                     -webkit-animation: none;
-                 }
-             }
-             .far {
-                 width: 100%;
-                 left: 350px;
-                 top: -30px;
-                 position: relative;
-                 color: black;
-                 z-index: 0;
-                 &:hover {
-                     position: relative;
-                     background-image: transparent;
-                     /*-webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);*/
-                     -webkit-background-clip: text;
-                     -webkit-text-fill-color: transparent;
-                     background-size: 300% auto;
-                     /*-webkit-animation: heart 2s linear infinite;
-                     animation: heart 2s linear inifinite;*/
+                     -webkit-animation: heart 3s forwards;
+                     animation: heart 3s forwards;
                  }
              }
          }
@@ -123,33 +103,6 @@
  @keyframes heart {
      0% {
          max-height: 0;
-     }
-     10% {
-         max-height: 10%;
-     }
-     20% {
-         max-height: 20%;
-     }
-     30% {
-         max-height: 30%;
-     }
-     40% {
-         max-height: 40%;
-     }
-     50% {
-         max-height: 50%;
-     }
-     60% {
-         max-height: 60%;
-     }
-     70% {
-         max-height: 70%;
-     }
-     80% {
-         max-height: 80%;
-     }
-     90% {
-         max-height: 90%;
      }
      100% {
          max-height: 100%;
