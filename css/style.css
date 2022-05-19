@@ -438,10 +438,31 @@ footer .footer a h4 {
   object-fit: cover;
 }
 
-@keyframes apparition {
-  100% {
+@keyframes appear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(1);
     opacity: 1;
-    transform: none;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes spinmenus {
+  from {
+    max-width: 0%;
+  }
+  to {
+    max-width: 100%;
+    visibility: hidden;
   }
 }
 .listemenus {
@@ -475,43 +496,36 @@ footer .footer a h4 {
   position: absolute;
 }
 
-.apparition {
-  opacity: 0;
-  transform: translateY(-5px);
-  -webkit-animation: apparition 8s 4s ease-out forwards;
-  animation: apparition 8s 4s ease-out forwards;
-  animation-fill-mode: both;
+.choice:nth-child(2) {
+  animation-delay: 0ms;
 }
 
-.apparition > :nth-child(2) {
-  animation: 2s;
+.choice:nth-child(3) {
+  animation-delay: 1s;
 }
 
-.apparition > :nth-child(3) {
-  animation-delay: 3s;
-}
-
-.apparition > :nth-child(4) {
-  animation-delay: 4s;
+.choice:nth-child(4) {
+  animation-delay: 2s;
 }
 
 .choice {
+  opacity: 0;
   box-sizing: border-box;
+  -webkit-animation: appear 3s linear forwards;
+  animation: appear 3s linear forwards;
 }
-.choice__one {
+.choice__list {
   opacity: 0;
-  transform: translateY(-20px);
-  -webkit-animation: apparition 4s ease-out forwards;
+  animation: appear 1s linear forwards;
 }
-.choice__two {
-  opacity: 0;
-  transform: translateY(-20px);
-  -webkit-animation: apparition 4s 3s ease-out forwards;
+.choice__list:nth-child(2) {
+  animation-delay: 0ms;
 }
-.choice__three {
-  opacity: 0;
-  transform: translateY(-20px);
-  -webkit-animation: apparition 4s 6s ease-out forwards;
+.choice__list:nth-child(3) {
+  animation-delay: 500ms;
+}
+.choice__list:nth-child(4) {
+  animation-delay: 1s;
 }
 .choice__title {
   margin: 50px 0 20px 10px;
@@ -588,23 +602,6 @@ footer .footer a h4 {
   animation: rotation 500ms linear;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes spinmenus {
-  from {
-    max-width: 0%;
-  }
-  to {
-    max-width: 100%;
-    visibility: hidden;
-  }
-}
 .form {
   width: 100%;
   padding-bottom: 1.5rem;
