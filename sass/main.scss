@@ -40,9 +40,41 @@
         flex-wrap: wrap;
     }
     .card {
-        display: flex;
         flex-direction: row;
+        max-width: 500px;
         width: 40%;
+        height: 250px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px 0 0 25px;
+        }
+        &__image--new {
+            height: 100%;
+            width: 60%;
+        }
+        &__image--new p {
+            left: 8%;
+            bottom: 90%;
+        }
+        &__text {
+            &__description {
+                margin-top: 30px;
+            }
+            width: 40%;
+            &__heading {
+                font-size: 27px;
+            }
+            &__byline {
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            &__heart i {
+                right: 90px;
+                top: 180px;
+                font-size: 40px;
+            }
+        }
     }
     footer .footer {
         display: flex;
