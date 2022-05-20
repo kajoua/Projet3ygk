@@ -43,8 +43,16 @@ button {
   font-size: 2rem;
 }
 
+@media screen and (min-width: 599px) {
+  .fonctionnement__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .btn {
   margin: 10px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   transition: 0.5s;
   border-radius: 50px;
@@ -68,6 +76,7 @@ button {
 }
 .btn:hover {
   opacity: 0.8;
+  box-shadow: 3px 6px 15px -6px #0f0f0f;
 }
 .btn__choice {
   margin: 50px 0 70px 90px;
@@ -233,16 +242,18 @@ header h1 {
   padding: 30px 0 10px 0;
 }
 .fonctionnement__list {
+  list-style: none;
   display: flex;
   flex-direction: column;
   counter-reset: Liste;
 }
 .fonctionnement__list__card {
+  min-width: 440px;
+  max-width: 450px;
   padding: 0 40px 30px 40px;
   transition: 0.5s;
 }
 .fonctionnement__list__card a {
-  max-width: 400px;
   position: relative;
   display: flex;
   align-items: center;
@@ -256,6 +267,7 @@ header h1 {
 }
 .fonctionnement__list__card a:hover {
   background: #fff;
+  box-shadow: 3px 6px 15px -6px #0f0f0f;
 }
 .fonctionnement__list__card a:before {
   content: counter(Liste);
@@ -288,32 +300,24 @@ header h1 {
   color: black;
 }
 
-#restaurant {
-  background-color: #f2f2f2;
-  width: 100%;
-  padding: 0 0 20px 0;
-}
-#restaurant h3 {
-  padding: 20px 0 10px 5px;
-}
-#restaurant__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.restaurant {
+  padding: 0 0 0 20px;
 }
 
 .card {
   margin: 20px 5px;
   box-sizing: border-box;
   background: #fff;
+  min-width: 400px;
   max-width: 430px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px 1px grey;
+  box-shadow: 4px 6px 20px -6px grey;
 }
 .card:hover {
   transform: translate(5px, 5px) scale(0.98);
+  box-shadow: 3px 6px 15px -6px #0f0f0f;
 }
 .card img {
   width: 100%;
@@ -397,9 +401,15 @@ footer .footer {
 footer .footer a {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #fff;
   font-size: 17px;
   padding: 5px;
+}
+footer .footer a .fa-utensils {
+  color: #fff;
+}
+footer .footer a .fa-hands-helping {
+  color: #fff;
 }
 footer .footer a p {
   padding-left: 15px;
@@ -514,19 +524,6 @@ footer .footer a h4 {
   -webkit-animation: appear 3s linear forwards;
   animation: appear 3s linear forwards;
 }
-.choice__list {
-  opacity: 0;
-  animation: appear 1s linear forwards;
-}
-.choice__list:nth-child(2) {
-  animation-delay: 0ms;
-}
-.choice__list:nth-child(3) {
-  animation-delay: 500ms;
-}
-.choice__list:nth-child(4) {
-  animation-delay: 1s;
-}
 .choice__title {
   margin: 50px 0 20px 10px;
   text-transform: uppercase;
@@ -539,11 +536,25 @@ footer .footer a h4 {
   background: #fff;
   border-radius: 20px;
   margin: 15px 10px 0 0;
-  box-shadow: 1px 1px 3px rgb(199, 196, 196);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 4px 6px 20px -6px grey;
+  opacity: 0;
+  animation: appear 1s linear forwards;
+}
+.choice__list:hover {
+  box-shadow: 3px 6px 15px -6px #0f0f0f;
+}
+.choice__list:nth-child(2) {
+  animation-delay: 0ms;
+}
+.choice__list:nth-child(3) {
+  animation-delay: 500ms;
+}
+.choice__list:nth-child(4) {
+  animation-delay: 1s;
 }
 .choice__list:hover .choice__spin {
   transform: scale(1);
@@ -750,6 +761,173 @@ footer .footer a h4 {
 }
 .project__btn {
   grid-area: btn;
+}
+
+@media screen and (min-width: 900px) {
+  .btn {
+    width: 350px;
+    height: 80px;
+    font-size: 25px;
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  .fonctionnement__list {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .restaurant__card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+  }
+
+  footer .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  footer .footer a {
+    font-size: 18px;
+  }
+
+  .choice__list {
+    max-width: 300px;
+    opacity: 0.8;
+    border-radius: 50px;
+  }
+  .choice__list:hover .choice__spin {
+    border-radius: 0 50px 50px 0;
+  }
+  .choice__list .choice__menus__price {
+    width: 20%;
+  }
+
+  .header__menu a .fa-arrow-left-long {
+    font-size: 40px;
+    opacity: 0.5;
+  }
+  .header__menu a h1 {
+    padding-left: 0;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagedefond {
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+    opacity: 0.5;
+    max-width: 100%;
+  }
+  .imagedefond img {
+    height: 100%;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .listemenus {
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .listemenus__title {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .listemenus__title H1 {
+    max-width: 100%;
+    text-align: center;
+    width: 400px;
+    height: 150px;
+    font-size: 50px;
+    color: #9356DC;
+    line-break: auto;
+    text-shadow: 5px 4px 4px #0f0f0f;
+  }
+
+  .listemenus__heart i {
+    right: 20%;
+    top: 30px;
+    font-size: 80px;
+  }
+
+  .choice__title {
+    font-weight: bold;
+  }
+
+  .choice__one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    min-width: 20%;
+    border-radius: 50px;
+    box-shadow: 4px 6px 20px -6px grey;
+    margin: 0 30px 0 0;
+  }
+
+  .choice__two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-radius: 50px;
+    width: 30%;
+    min-width: 20%;
+    box-shadow: 4px 6px 20px -6px grey;
+    margin: 0 30px 0 0;
+  }
+
+  .choice__three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-radius: 50px;
+    width: 30%;
+    min-width: 20%;
+    box-shadow: 4px 6px 20px -6px grey;
+    padding: 0 0px 30px 0px;
+  }
+
+  .btn__choice {
+    opacity: 0.9;
+    font-family: "Shrikhand", sans-serif;
+  }
+  .btn__choice:hover {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

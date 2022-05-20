@@ -8,9 +8,15 @@ footer {
         a {
             display: flex;
             flex-direction: row;
-            color: white;
+            color: $colour-white;
             font-size: 17px;
             padding: 5px;
+            .fa-utensils {
+                color: $colour-white;
+            }
+            .fa-hands-helping {
+                color: $colour-white;
+            }
             p {
                 padding-left: 15px;
                 ;

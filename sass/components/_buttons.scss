@@ -1,5 +1,7 @@
 .btn {
     margin: 10px;
+    display: flex;
+    justify-content: center;
     text-align: center;
     transition: 0.5s;
     border-radius: 50px;
@@ -22,6 +24,7 @@
     }
     &:hover {
         opacity: 0.8;
+        box-shadow: 3px 6px 15px -6px $colour-hover-shadow;
     }
     &__choice {
         margin: 50px 0 70px 90px;
