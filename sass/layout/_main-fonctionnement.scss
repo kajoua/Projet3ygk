@@ -48,6 +48,15 @@
                 }
             }
             i {
+                .fas.fa-mobile-al:hover {
+                    color: $colour-violet;
+                }
+                .fas.fa-list-ul:hover {
+                    color: $colour-violet;
+                }
+                .fas.fa-store:hover {
+                    color: $colour-violet;
+                }
                 font-size: 25px;
                 color: $colour-grey;
                 transition: color .3s;

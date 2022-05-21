@@ -9,14 +9,13 @@
                 padding-left: 20px;
             }
             h1 {
-                padding-left: 15%;
+                width: 100%;
                 font-size: 40px;
             }
         }
     }
     
     .imagedefond {
-        max-width: 500px;
         width: 100%;
         height: 300px;
         img {
@@ -59,7 +58,6 @@
     
     .listemenus {
         position: relative;
-        max-width: 500px;
         width: 100%;
         z-index: 1;
         box-sizing: border-box;
@@ -113,7 +111,7 @@
             width: 55px;
         }
         &__list {
-            width: 100%;
+            width: 400px;
             background: $colour-white;
             border-radius: 20px;
             margin: 15px 10px 0 0;

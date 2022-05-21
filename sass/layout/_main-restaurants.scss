@@ -60,27 +60,25 @@
             top: 15px;
             font-size: 30px;
             position: absolute;
+            &.far {
+                &:hover {
+                    display: none;
+                    color: transparent;
+                    z-index: 0;
+                }
+            }
+            &.fas {
+                color: transparent;
+                &:hover {
+                    background-image: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-size: 300% auto;
+                    -webkit-animation: heart 4s forwards;
+                    animation: heart 4s forwards;
+                }
+            }
         }
-    }
-}
-
-.far {
-    &:hover {
-        display: none;
-        color: transparent;
-        z-index: 0;
-    }
-}
-
-.fas {
-    color: transparent;
-    &:hover {
-        background-image: -webkit-linear-gradient($colour-turquoise, $colour-pink, $colour-violet);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 300% auto;
-        -webkit-animation: heart 4s forwards;
-        animation: heart 4s forwards;
     }
 }
 
