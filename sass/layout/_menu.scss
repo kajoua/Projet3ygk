@@ -71,7 +71,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        h1 {
+        h2 {
             font-weight: 100;
             font-size: 35px;
             &:first-letter {
@@ -165,13 +165,24 @@
                     width: 60%;
                 }
                 h4 {
+                    width: 100%;
                     margin-bottom: 7px;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
+                    &:hover {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
                 }
                 p {
                     font-size: 18px;
+                    &:hover {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;

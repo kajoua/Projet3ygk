@@ -86,7 +86,7 @@
             }
         }
     }
-    footer .footer {
+    footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -102,7 +102,7 @@
     }
     .imagedefond {
         width: 100%;
-        height: 100%;
+        height: 2000px;
         object-fit: cover;
         opacity: 0.5;
         max-width: 100%;
@@ -135,6 +135,10 @@
         }
     }
     .choice {
+        &__list {
+            width: 90%;
+            max-width: 400px;
+        }
         &__menus {
             &__describ {
                 margin: 0px 0 0 25px;
@@ -142,13 +146,16 @@
                 width: 88%;
                 h4 {
                     font-size: 18px;
-                    text-overflow: normal;
+                    text-overflow: clip;
                     white-space: normal;
-                    &:hover {}
+                    &:hover {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
                 p {
                     font-size: 14px;
-                    text-overflow: normal;
+                    text-overflow: clip;
                     white-space: normal;
                     &:hover {
                         text-overflow: ellipsis;
@@ -167,6 +174,7 @@
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
+        align-content: center;
     }
     .listemenus {
         background-color: transparent;
@@ -180,7 +188,7 @@
         &__title {
             display: flex;
             flex-direction: row-reverse;
-            H1 {
+            H2 {
                 max-width: 100%;
                 text-align: center;
                 width: 400px;
@@ -193,7 +201,7 @@
         }
     }
     .listemenus__heart i {
-        right: 20%;
+        right: 9%;
         top: 30px;
         font-size: 80px;
     }
@@ -205,11 +213,12 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        width: 30%;
-        min-width: 20%;
+        width: 80%;
+        max-width: 450px;
         border-radius: 50px;
         box-shadow: 4px 6px 20px -6px $colour-grey;
-        margin: 0 30px 0 0;
+        margin: 0 0 20px 0;
+        padding: 0 0 30px 0;
     }
     .choice__two {
         display: flex;
@@ -217,10 +226,11 @@
         align-items: center;
         align-content: center;
         border-radius: 50px;
-        width: 30%;
-        min-width: 20%;
+        width: 80%;
+        max-width: 450px;
         box-shadow: 4px 6px 20px -6px $colour-grey;
-        margin: 0 30px 0 0;
+        margin: 0 0 20px 0;
+        padding: 0 0 30px 0;
     }
     .choice__three {
         display: flex;
@@ -228,14 +238,16 @@
         align-items: center;
         align-content: center;
         border-radius: 50px;
-        width: 30%;
-        min-width: 20%;
+        width: 80%;
+        max-width: 450px;
         box-shadow: 4px 6px 20px -6px $colour-grey;
-        padding: 0 0px 30px 0px;
+        padding: 0 0 30px 0;
+        margin: 0 0 20px 0;
     }
     .btn__choice {
         opacity: 0.9;
         font-family: "Shrikhand", sans-serif;
+        margin: 0;
         &:hover {
             opacity: 1;
         }
@@ -243,11 +255,53 @@
 }
 
 @media screen and (min-width: 900px) {
+    .listemenus__heart i {
+        right: 20%;
+    }
+    .imagedefond {
+        height: 900px;
+    }
     .menus {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
+    }
+    .choice {
+        &__menus {
+            &__describ {
+                height: 70px;
+            }
+        }
+        &__list {
+            width: 90%;
+            height: 115px;
+            max-width: 400px;
+            &:hover .choice__spin {
+                height: 115px;
+            }
+        }
+        &__one {
+            width: 30%;
+            margin: 0 30px 0 0;
+            padding: 0;
+            height: 550px;
+        }
+        &__two {
+            width: 30%;
+            margin: 0 30px 0 0;
+            padding: 0;
+            height: 550px;
+        }
+        &__three {
+            width: 30%;
+            margin: 0 0 30px 0;
+            padding: 0;
+            height: 550px;
+        }
+    }
+    .btn {
+        margin: 40px 0 0 0;
     }
 }
