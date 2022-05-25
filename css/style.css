@@ -43,12 +43,6 @@ button {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 599px) {
-  .fonctionnement__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 .btn {
   margin: 10px;
   display: flex;
@@ -136,31 +130,6 @@ header h1 {
   font-size: 35px;
   align-content: center;
   justify-content: center;
-}
-
-.nav {
-  padding-right: 6rem;
-  flex: 2 1 auto;
-  text-align: right;
-}
-.nav__link {
-  display: inline;
-  font-size: 3rem;
-  padding-left: 1.5rem;
-}
-.nav__link a {
-  text-decoration: none;
-  color: #D6FFF5;
-}
-.nav__link--active {
-  color: #F2F2F2;
-}
-.nav__link--active:hover {
-  cursor: default;
-  color: #F2F2F2;
-}
-.nav__link a:hover {
-  color: #fff;
 }
 
 .container {
@@ -537,7 +506,7 @@ footer a h4 {
   transform: scale(1);
   background-color: #99E2D0;
   height: 100px;
-  width: 25%;
+  width: 30%;
   border-radius: 0 20px 20px 0;
   display: flex;
   align-items: center;
@@ -556,22 +525,20 @@ footer a h4 {
   align-items: center;
   justify-content: space-between;
 }
+.choice__menus:hover {
+  width: 100%;
+}
 .choice__menus__describ {
   margin: 0 0 0 20px;
   height: 50px;
   width: 90%;
-}
-.choice__menus__describ:hover {
-  width: 60%;
-}
-.choice__menus__describ h4 {
-  width: 100%;
-  margin-bottom: 7px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.choice__menus__describ h4:hover {
+.choice__menus__describ h4 {
+  width: 100%;
+  margin-bottom: 7px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -582,12 +549,8 @@ footer a h4 {
   white-space: nowrap;
   overflow: hidden;
 }
-.choice__menus__describ p:hover {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
 .choice__menus__price {
+  font-weight: 600;
   width: 10%;
   padding: 0 20px 0 0;
 }
@@ -643,57 +606,7 @@ footer a h4 {
   margin-bottom: 0.75rem;
 }
 
-.project {
-  width: 100%;
-  margin-bottom: 1.8rem;
-  display: grid;
-  grid-template-columns: 5fr 3fr;
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 1.5rem;
-  grid-template-areas: "image synopsis" "tags synopsis" "btn btn";
-}
-.project__image {
-  grid-area: image;
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-}
-.project__image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-}
-.project__synopsis {
-  grid-area: synopsis;
-  padding-left: 1.5rem;
-}
-.project__synopsis h1 {
-  color: #fff;
-  text-shadow: 0.55rem 0.55rem #1a1a1a;
-}
-.project__synopsis p {
-  line-height: 2.5rem;
-}
-.project__tags {
-  grid-area: tags;
-}
-.project__tags p {
-  color: #fff;
-}
-.project__tags p strong {
-  color: black;
-  font-weight: 900;
-  font-style: italic;
-}
-.project__btn {
-  grid-area: btn;
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .btn {
     width: 350px;
     height: 80px;
@@ -710,6 +623,7 @@ footer a h4 {
   .fonctionnement__list {
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .restaurant__card {
@@ -821,21 +735,9 @@ footer a h4 {
   }
   .choice__menus__describ h4 {
     font-size: 18px;
-    text-overflow: clip;
-    white-space: normal;
-  }
-  .choice__menus__describ h4:hover {
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .choice__menus__describ p {
     font-size: 14px;
-    text-overflow: clip;
-    white-space: normal;
-  }
-  .choice__menus__describ p:hover {
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .choice__menus__price {
     width: 20%;
@@ -933,7 +835,7 @@ footer a h4 {
     opacity: 1;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .listemenus__heart i {
     right: 20%;
   }
@@ -952,6 +854,31 @@ footer a h4 {
 
   .choice__menus__describ {
     height: 70px;
+  }
+  .choice__menus__describ:hover {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .choice__menus__describ h4 {
+    text-overflow: clip;
+    white-space: initial;
+    overflow: hidden;
+  }
+  .choice__menus__describ h4:hover {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .choice__menus__describ p {
+    text-overflow: clip;
+    white-space: initial;
+    overflow: hidden;
+  }
+  .choice__menus__describ p:hover {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .choice__list {
     width: 90%;

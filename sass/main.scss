@@ -4,11 +4,9 @@
 @import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
-@import "./base/tablette";
 @import "./components/buttons";
 @import "./layout/loader";
 @import "./layout/header";
-@import "./layout/nav";
 @import "./layout/container";
 @import "./layout/main-search";
 @import "./layout/main-fonctionnement";
@@ -16,10 +14,7 @@
 @import "./layout/footer";
 @import "./layout/menu";
 @import "./layout/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     //Page d'accueil 
     .btn {
         width: 350px;
@@ -36,6 +31,7 @@
         &__list {
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
         }
     }
     .restaurant__card {
@@ -146,21 +142,9 @@
                 width: 88%;
                 h4 {
                     font-size: 18px;
-                    text-overflow: clip;
-                    white-space: normal;
-                    &:hover {
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
                 }
                 p {
                     font-size: 14px;
-                    text-overflow: clip;
-                    white-space: normal;
-                    &:hover {
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
                 }
             }
             &__price {
@@ -254,7 +238,7 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
     .listemenus__heart i {
         right: 20%;
     }
@@ -272,6 +256,31 @@
         &__menus {
             &__describ {
                 height: 70px;
+                &:hover {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                h4 {
+                    text-overflow: clip;
+                    white-space: initial;
+                    overflow: hidden;
+                    &:hover {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+                p {
+                    text-overflow: clip;
+                    white-space: initial;
+                    overflow: hidden;
+                    &:hover {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
             }
         }
         &__list {
