@@ -399,7 +399,7 @@ footer a h4 {
     opacity: 0;
   }
   to {
-    transform: translateY(1);
+    transform: translateY(100%);
     opacity: 1;
   }
 }
