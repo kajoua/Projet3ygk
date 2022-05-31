@@ -100,7 +100,6 @@
  
  .choice {
      opacity: 0;
-     box-sizing: border-box;
      -webkit-animation: appear 3s linear forwards;
      animation: appear 3s linear forwards;
      &__title {
@@ -115,10 +114,6 @@
          background: $colour-white;
          border-radius: 20px;
          margin: 15px 10px 0 0;
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         justify-content: space-between;
          box-shadow: 4px 6px 20px -6px $colour-grey;
          opacity: 0;
          animation: appear 1s linear forwards;
