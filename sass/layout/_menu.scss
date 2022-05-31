@@ -111,8 +111,6 @@
      }
      &__list {
          width: 100%;
-         background: $colour-white;
-         border-radius: 20px;
          margin: 15px 10px 0 0;
          box-shadow: 4px 6px 20px -6px $colour-grey;
          opacity: 0;
@@ -122,12 +120,15 @@
          }
          &:nth-child(2) {
              animation-delay: 0ms;
+             opacity: 0;
          }
          &:nth-child(3) {
-             animation-delay: 500ms;
+             animation-delay: 600ms;
+             opacity: 0;
          }
          &:nth-child(4) {
-             animation-delay: 1s;
+             animation-delay: 1200ms;
+             opacity: 0;
          }
          &:hover .choice__spin {
              transform: scale(1);
@@ -146,8 +147,10 @@
          }
      }
      &__menus {
+         background: $colour-white;
+         border-radius: 20px;
          height: 100px;
-         width: 100%;
+         max-width: 500px;
          display: flex;
          flex-direction: row;
          align-items: center;

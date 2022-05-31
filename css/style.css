@@ -209,8 +209,11 @@ header h1 {
   color: grey;
 }
 .fonctionnement__list__card a:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   box-shadow: 3px 6px 15px -6px #0f0f0f;
+}
+.fonctionnement__list__card a:hover:hover i {
+  color: #9356DC;
 }
 .fonctionnement__list__card a:before {
   content: counter(Liste);
@@ -234,18 +237,6 @@ header h1 {
   font-size: 25px;
   color: grey;
   transition: color 0.3s;
-}
-.fonctionnement__list__card a i .fas.fa-mobile-al:hover {
-  color: #9356DC;
-}
-.fonctionnement__list__card a i .fas.fa-list-ul:hover {
-  color: #9356DC;
-}
-.fonctionnement__list__card a i .fas.fa-store:hover {
-  color: #9356DC;
-}
-.fonctionnement__list__card a i:hover {
-  color: #9356DC;
 }
 .fonctionnement__list__card a h4 {
   padding-left: 20px;
@@ -477,8 +468,6 @@ footer a h4 {
 }
 .choice__list {
   width: 100%;
-  background: #fff;
-  border-radius: 20px;
   margin: 15px 10px 0 0;
   box-shadow: 4px 6px 20px -6px grey;
   opacity: 0;
@@ -489,12 +478,15 @@ footer a h4 {
 }
 .choice__list:nth-child(2) {
   animation-delay: 0ms;
+  opacity: 0;
 }
 .choice__list:nth-child(3) {
-  animation-delay: 500ms;
+  animation-delay: 600ms;
+  opacity: 0;
 }
 .choice__list:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 1200ms;
+  opacity: 0;
 }
 .choice__list:hover .choice__spin {
   transform: scale(1);
@@ -512,8 +504,10 @@ footer a h4 {
   animation: spinmenus 2s;
 }
 .choice__menus {
+  background: #fff;
+  border-radius: 20px;
   height: 100px;
-  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -622,6 +616,7 @@ footer a h4 {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    min-width: 895px;
     justify-content: space-evenly;
   }
 
@@ -709,12 +704,14 @@ footer a h4 {
     opacity: 0.8;
     width: 90%;
     max-width: 400px;
-    border-radius: 50px;
-    height: 120px;
   }
   .choice__list:hover .choice__spin {
     border-radius: 0 50px 50px 0;
     height: 120px;
+  }
+  .choice__menus {
+    height: 120px;
+    border-radius: 50px;
   }
   .choice__menus__describ {
     margin: 0px 0 0 25px;
@@ -858,11 +855,7 @@ footer a h4 {
   }
   .choice__list {
     width: 90%;
-    height: 115px;
     max-width: 400px;
-  }
-  .choice__list:hover .choice__spin {
-    height: 115px;
   }
   .choice__one {
     width: 30%;

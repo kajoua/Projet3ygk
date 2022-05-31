@@ -36,6 +36,7 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        min-width: 895px;
         justify-content: space-evenly;
     }
     .card {
@@ -123,14 +124,14 @@
             opacity: 0.8;
             width: 90%;
             max-width: 400px;
-            border-radius: 50px;
-            height: 120px;
             &:hover .choice__spin {
                 border-radius: 0 50px 50px 0;
                 height: 120px;
             }
         }
         &__menus {
+            height: 120px;
+            border-radius: 50px;
             &__describ {
                 margin: 0px 0 0 25px;
                 height: 60px;
@@ -268,11 +269,7 @@
         }
         &__list {
             width: 90%;
-            height: 115px;
             max-width: 400px;
-            &:hover .choice__spin {
-                height: 115px;
-            }
         }
         &__one {
             width: 30%;
