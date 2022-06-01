@@ -56,7 +56,7 @@ button {
   padding: 25px 35px;
   background-size: 200% auto;
   color: #fff;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC 100%);
+  background-image: linear-gradient(to bottom, #FF79DA, hsl(267deg, 66%, 60%) 100%);
   position: relative;
   padding: 17px 25px;
   width: 50%;
@@ -95,7 +95,7 @@ button {
 .center_div h1::before {
   content: "ohmyfood";
   width: 100%;
-  background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, #9356DC);
+  background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, hsl(267deg, 66%, 60%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: auto 75%;
@@ -209,20 +209,20 @@ header h1 {
   color: grey;
 }
 .fonctionnement__list__card a:hover {
-  opacity: 0.8;
+  background-color: hsla(267deg, 66%, 60%, 0.2);
   box-shadow: 3px 6px 15px -6px #0f0f0f;
 }
 .fonctionnement__list__card a:hover:hover i {
-  color: #9356DC;
+  color: hsl(267deg, 66%, 60%);
 }
 .fonctionnement__list__card a:before {
   content: counter(Liste);
   counter-increment: Liste 1;
   position: absolute;
   left: -1.3em;
-  top: 50%;
+  top: 42px;
   margin-top: -1.3em;
-  background: #9356DC;
+  background: hsl(267deg, 66%, 60%);
   color: #fff;
   height: 2em;
   width: 2em;
@@ -244,6 +244,7 @@ header h1 {
 }
 
 .restaurant {
+  margin-top: 20px;
   padding: 0 0 0 20px;
 }
 
@@ -313,7 +314,7 @@ header h1 {
   color: transparent;
 }
 .card__text__heart i.fas:hover {
-  background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, #9356DC);
+  background-image: -webkit-linear-gradient(#99E2D0, #FF79DA, hsl(267deg, 66%, 60%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300% auto;
@@ -454,11 +455,6 @@ footer a h4 {
   animation-delay: 2s;
 }
 
-.choice {
-  opacity: 0;
-  -webkit-animation: appear 3s linear forwards;
-  animation: appear 3s linear forwards;
-}
 .choice__title {
   margin: 50px 0 20px 10px;
   text-transform: uppercase;
@@ -757,7 +753,7 @@ footer a h4 {
     width: 400px;
     height: 150px;
     font-size: 50px;
-    color: #9356DC;
+    color: hsl(267deg, 66%, 60%);
     line-break: auto;
     text-shadow: 5px 4px 4px #0f0f0f;
   }

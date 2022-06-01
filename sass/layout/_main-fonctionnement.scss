@@ -19,13 +19,13 @@
                 align-items: center;
                 padding: 25px 20px 25px 25px;
                 margin: .5em 0;
-                background: #F2F2F2;
+                background: $colour-secondary;
                 border-radius: 20px;
                 transition: all .3s ease-out;
                 box-shadow: 4px 6px 20px -6px $colour-grey;
                 color: $colour-grey;
                 &:hover {
-                    opacity: 0.8;
+                    background-color: hsl(267, 66%, 60%, 0.2);
                     box-shadow: 3px 6px 15px -6px $colour-hover-shadow;
                     &:hover i {
                         color: $colour-violet;
@@ -36,7 +36,7 @@
                     counter-increment: Liste 1;
                     position: absolute;
                     left: -1.3em;
-                    top: 50%;
+                    top: 42px;
                     margin-top: -1.3em;
                     background: $colour-violet;
                     color: #fff;

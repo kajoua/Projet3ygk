@@ -99,9 +99,6 @@
  }
  
  .choice {
-     opacity: 0;
-     -webkit-animation: appear 3s linear forwards;
-     animation: appear 3s linear forwards;
      &__title {
          margin: 50px 0 20px 10px;
          text-transform: uppercase;
