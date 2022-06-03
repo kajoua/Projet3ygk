@@ -515,7 +515,7 @@ footer a h4 {
 .choice__menus__describ {
   margin: 0 0 0 20px;
   height: 50px;
-  width: 90%;
+  width: 85%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -535,7 +535,7 @@ footer a h4 {
 }
 .choice__menus__price {
   font-weight: 600;
-  width: 10%;
+  width: 15%;
   padding: 0 20px 0 0;
 }
 .choice__spin {
