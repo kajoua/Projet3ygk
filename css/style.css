@@ -87,7 +87,7 @@ button {
   z-index: 5;
 }
 .center_div h1 {
-  font-size: 80px;
+  font-size: 300%;
   padding: 20px;
   color: #F2F2F2;
   position: relative;
